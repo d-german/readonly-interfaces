@@ -3,14 +3,11 @@ namespace InterfaceTests;
 public class Tests
 {
     [Test]
-    public void LspOcpViolation()
+    public void ToggleIsRestrictedTest()
     {
         IHealthcareDocument ToggleIsRestricted(IHealthcareDocument healthcareDocument)
         {
-            if (healthcareDocument is HealthcareDocument restrictedHealthcareDocument)
-            {
-                restrictedHealthcareDocument.IsRestricted = !restrictedHealthcareDocument.IsRestricted;
-            }
+            healthcareDocument.IsRestricted = !healthcareDocument.IsRestricted;
 
             return healthcareDocument;
         }
