@@ -2,13 +2,13 @@ namespace InterfaceTests;
 
 public class HealthcareDocument : IHealthcareDocument
 {
-    public long ID { get; set; }
-    public DateTime? ClinicallyRelevantDate { get; set; }
-    public DateTime? AttachedDate { get; set; }
-    public string FacilityName { get; set; }
-    public string DepartmentName { get; set; }
-    public string Name { get; set; }
-    public DateTime? StoredDate { get; set; }
-    public string Description { get; set; }
-    public bool IsRestricted { get; set; }
+    public long ID { get; init; }
+    public DateTime? ClinicallyRelevantDate { get; init; }
+    public DateTime? AttachedDate { get; init; }
+    public string FacilityName { get; init; }
+    public string DepartmentName { get; init; }
+    public string Name { get; init; }
+    public DateTime? StoredDate { get; init; }
+    public string Description { get; init; }
+    public bool IsRestricted { get; init; }
 }

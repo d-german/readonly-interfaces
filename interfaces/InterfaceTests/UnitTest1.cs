@@ -7,9 +7,20 @@ public class Tests
     {
         IHealthcareDocument ToggleIsRestricted(IHealthcareDocument healthcareDocument)
         {
-            healthcareDocument.IsRestricted = !healthcareDocument.IsRestricted;
-
-            return healthcareDocument;
+            return new HealthcareDocument
+            {
+                Description = healthcareDocument.Description,
+                Name = healthcareDocument.Name,
+                AttachedDate = healthcareDocument.AttachedDate,
+                DepartmentName = healthcareDocument.DepartmentName,
+                ID = healthcareDocument.ID,
+                FacilityName = healthcareDocument.FacilityName,
+                StoredDate = healthcareDocument.StoredDate,
+                ClinicallyRelevantDate = healthcareDocument.ClinicallyRelevantDate,
+                
+                // this is the only updated property
+                IsRestricted = !healthcareDocument.IsRestricted,
+            };
         }
 
         var restrictedHealthcareDocument = new HealthcareDocument { IsRestricted = true };
