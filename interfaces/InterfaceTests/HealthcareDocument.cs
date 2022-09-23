@@ -1,6 +1,6 @@
 namespace InterfaceTests;
 
-public class HealthcareDocument : IHealthcareDocument
+public record HealthcareDocument
 {
     public long ID { get; init; }
     public DateTime? ClinicallyRelevantDate { get; init; }
