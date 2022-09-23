@@ -5,13 +5,8 @@ public class Tests
     [Test]
     public void ToggleIsRestrictedTest()
     {
-        HealthcareDocument ToggleIsRestricted(HealthcareDocument healthcareDocument)
-        {
-            return healthcareDocument with { IsRestricted = !healthcareDocument.IsRestricted };
-        }
-
         var restrictedHealthcareDocument = new HealthcareDocument { IsRestricted = true };
-        var healthcareDocument = ToggleIsRestricted(restrictedHealthcareDocument);
+        var healthcareDocument = restrictedHealthcareDocument.ToggleIsRestricted();
 
         Assert.That(healthcareDocument.IsRestricted, Is.False);
     }
