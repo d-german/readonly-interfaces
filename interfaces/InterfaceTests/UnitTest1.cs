@@ -7,9 +7,9 @@ public class Tests
     {
         IHealthcareDocument ToggleIsRestricted(IHealthcareDocument healthcareDocument)
         {
-            if (healthcareDocument is HealthcareDocument restrictedHealthcareDocument)
+            if (healthcareDocument is HealthcareDocument updateRestrictedHealthcareDocument)
             {
-                restrictedHealthcareDocument.IsRestricted = !restrictedHealthcareDocument.IsRestricted;
+                updateRestrictedHealthcareDocument.IsRestricted = !updateRestrictedHealthcareDocument.IsRestricted;
             }
 
             return healthcareDocument;
